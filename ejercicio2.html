@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio - Switch</title>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="img/productos/banner.jpg" alt="">
+    </div>
+    <div style="width: 60%;margin: auto;">
+        <!--Lado Izquierdo-->
+        <div style="width: 50%; margin: auto; float: left;">
+            <table>
+                <caption style="text-align: center; margin-top: 30px;">Venta De Productos De Vestir</caption>
+                <tr>
+                    <td>Productos</td>
+                    <td>
+                        <select name="" id="op" onchange="mostrar();">
+                            <option value="1">Reloj</option>
+                            <option value="2">Bolsa</option>
+                            <option value="3">Zapatillas</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Precio</td>
+                    <td>
+                        <input type="text" name="" id="txtPres" value="80.00" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cantidad</td>
+                    <td>
+                        <input type="number" name="" id="txtCan" value="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Importe a Pagar</td>
+                    <td>
+                        <input type="text" name="" id="txtImp" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Calcular">
+                    </td>
+                    <td>
+                        <input type="button" value="Nuevo">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="width: 50%; float: right;">
+            <img src="img/productos/reloj.jpg" alt="" width="80%">
+        </div>
+    </div>
+    <script>
+        function mostrar(){
+            let xop = parseInt(document.getElementById("op").value);
+            let xpre=0;
+            switch(xop){
+                case 1:
+                    xpre=80.00;
+                    document.getElementById("img").src="img/productos/reloj.jpg";
+                    break;
+                case 2:
+                    xpre=200.00;
+                    document.getElementById("img").src="img/productos/bolsa.jpg";
+                    break;
+                case 3:
+                    xpre=250.00
+                    document.getElementById("img").src="img/productos/zapatillas.jpg";
+                    break;
+            }
+            document.getElementById("txtPre").value = xpre.toFixed(2);
+        }
+        function Nuevo(){
+            document.getElementById('txtPres').value="";
+            document.getElementById('txtCan').value="";
+            document.getElementById('txtImp').value="";
+            document.getElementById('txtPres').txtCan();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSCript - Estructura Switch</title>
+</head>
+<body>
+    <h1>Estructura Switch</h1>
+    <hr>
+    <h3>Ingrese Numero de Mes</h3>
+    <input type="text" id="txtNum">
+    <h3>Resultado</h3>
+    <input type="text" name="" id="txtRes" disabled>
+    <hr>
+    <input onclick="mostrar();" type="button" value="Mostrar Mes">
+
+    <script>
+        function mostrar(){
+            let xnum = parseInt(document.getElementById("txtNum").value);
+            if (xnum >= 1 && xnum <= 12){
+                switch(xnum){
+                    case 1:
+                        document.getElementById("txtRes").value = "Enero";
+                        break
+                    case 2:
+                        document.getElementById("txtRes").value = "Febrero";
+                        break
+                    case 3:
+                        document.getElementById("txtRes").value = "Marzo";
+                        break
+                    case 4:
+                        document.getElementById("txtRes").value = "Abril";
+                        break
+                    case 5:
+                        document.getElementById("txtRes").value = "Mayo";
+                        break
+                    case 6:
+                        document.getElementById("txtRes").value = "Junio";
+                        break
+                    case 7:
+                        document.getElementById("txtRes").value = "Julio";
+                        break
+                    case 8:
+                        document.getElementById("txtRes").value = "AAgosto";
+                        break
+                    case 9:
+                        document.getElementById("txtRes").value = "Septiembre";
+                        break
+                    case 10:
+                        document.getElementById("txtRes").value = "Octubre";
+                        break
+                    case 11:
+                        document.getElementById("txtRes").value = "Noviembre";
+                        break
+                    case 12:
+                        document.getElementById("txtRes").value = "Diciembre";
+                        break
+                    }
+                }else{
+                    alert("El Numero De Mes Es Entre 1 y 12");
+                }
+            }
+    </script>
+</body>
+</html>
